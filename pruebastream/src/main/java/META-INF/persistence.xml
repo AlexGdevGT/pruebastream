@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="myapp" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider> 
+		<jta-data-source>java:comp/env/jdbc/con_mysql</jta-data-source>   
+		<properties>
+			<property name="hibernate.use_sql_comments" value="false" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="openjpa.Log" value="DefaultLevel=ERROR, Runtime=ERROR, Tool=ERROR, SQL=TRACE"/> 
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" ></property>
+			<property name="org.hibernate" value="false"/>
+			<property name="org.hibernate.SQL" value="false"/>
+			<property name="org.hibernate.tool.hbm2ddl" value="false"/>
+			<property name="org.hibernate.show_sql" value="false"/>
+			<property name="eclipselink.logging.level" value="OFF"/>
+		</properties>
+	</persistence-unit>
+</persistence>

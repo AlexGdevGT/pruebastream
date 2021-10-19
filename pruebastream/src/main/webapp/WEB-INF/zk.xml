@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <zk xmlns="http://www.zkoss.org/2005/zk/config"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zk/config http://www.zkoss.org/2005/zk/config/zk.xsd">  -->
+<zk>
+    <client-config>
+        <debug-js>true</debug-js>
+    </client-config>
+    <!-- <library-property>
+        <name>org.zkoss.theme.preferred</name>
+        <value>breeze</value>
+    </library-property>  -->
+    <!-- iceblue_c sapphire silvertail-->
+    <library-property>
+	    <name>org.zkoss.theme.preferred</name>
+	    <value>atlantic</value>
+	</library-property>
+	
+	<!--<library-property>
+	    <name>zkthemelocal</name>
+	    <value>atlantic</value>
+	</library-property> -->
+    
+    <library-property>
+        <name>org.zkoss.zkplus.databind.AnnotateDataBinderInit.compatible</name>
+        <value>true</value>
+    </library-property>
+    <library-property>
+		<name>org.zkoss.theme.atlantic.useGoogleFont.disabled</name>
+		<value>true</value>
+	</library-property>
+	<library-property>
+	    <name>org.zkoss.web.preferred.firstDayOfWeek</name>
+	    <value>1</value><!-- domingo -->
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.progressbox.position</name>
+		<value>center,center</value>
+	</library-property>
+	
+	<session-config>
+		<session-timeout>780</session-timeout> <!-- 1200 segundos = 20 minutos, 780 = 13 minutos (donde funciona) 300 = 5 minutos para pruebas -->
+		<device-type>ajax</device-type>
+		<timeout-message>Expiro el tiempo de sesion.</timeout-message>
+		<timeout-uri>/timeout.zul</timeout-uri><!-- An empty URL can cause the browser to reload the same URL -->
+		<automatic-timeout/>
+	</session-config>
+</zk>

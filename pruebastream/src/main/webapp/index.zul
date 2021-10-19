@@ -1,0 +1,22 @@
+<?page title="index" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="index" border="normal" apply="org.zkoss.bind.BindComposer" 
+		viewModel="@id('vm') @init('com.alex.pruebastream.vmcontroller.IndexVM')">
+	Página de prueba
+	<listbox model="@load(vm.listadoContactos)">
+		<listhead>
+			<listheader label="Id" />
+			<listheader label="Nombre" />
+			<listheader label="Correo" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="@load(each.idcontact)" />
+				<listcell label="@load(each.name)" />
+				<listcell label="@load(each.email)" />
+			</listitem>
+		</template>
+	</listbox>
+	<button label="Buscar" onClick="@command('buscar')" />
+</window>
+</zk>
